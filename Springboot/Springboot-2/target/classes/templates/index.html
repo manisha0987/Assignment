@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Customer Manager</title>
+</head>
+
+<body>
+	<div align="center">
+		<h1>Customer List</h1>
+		<a href="/new">Create New Product</a>
+		<br /><br />
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Customer ID</th>
+					<th>Name</th>
+					<th>City</th>
+					<th>phoneNumber </th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="customer : ${listCustomers}">
+					<td th:text="${customer.id}"></td>
+					<td th:text="${customer.cname}"></td>
+					<td th:text="${customer.city}"></td>
+					<td th:text="${customer.phoneNumber}"></td>
+						<td>
+					<a th:href="@{/edit/{id}(id=${customer.id})}">
+					Edit</a>
+					
+					<a th:href="@{/delete/{id}(id=${customer.id})}">
+					Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
