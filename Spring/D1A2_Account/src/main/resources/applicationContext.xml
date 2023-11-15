@@ -14,30 +14,30 @@
 	
 	<bean id="empbean" class="com.cg.Customer">
 		<property name="id"> <value>20</value></property>
-		<property name="name"><value>Alisa</value></property>
+		<property name="name"><value>Sai</value></property>
 		<property name="address" ref="add"></property>
 	</bean>
 	
 	<bean id="updateAdd" class="com.cg.Address">
-		<property name="city"> <value>Hyderabad</value></property>
-		<property name="state"><value>Telangana</value></property>
+		<property name="city"> <value>Vizag</value></property>
+		<property name="state"><value>AP</value></property>
 	</bean>
 	
 	<bean id="updateEmp" class="com.cg.Customer">
 		<property name="id"> <value>21</value></property>
-		<property name="name"><value>Aravind</value></property>
+		<property name="name"><value>mani</value></property>
 		<property name="address" ref="updateAdd"></property>
 	</bean>
 	
 	<bean id="account" class="com.cg.Account" scope="prototype">
 		<property name="id"> <value>25</value></property>
-		<property name="holderName"> <value>Aravind</value></property>
+		<property name="holderName"> <value>mani</value></property>
 		<property name="balance"><value>25000f</value></property>
 	</bean>
 
 	<bean id="custdetails" class="com.cg.Customer" autowire="byName">
 		<property name="id"> <value>20</value></property>
-		<property name="name"><value>Aravind</value></property>
+		<property name="name"><value>mani</value></property>
 		<property name="address" ref="updateAdd"></property>
 	</bean>
 	
