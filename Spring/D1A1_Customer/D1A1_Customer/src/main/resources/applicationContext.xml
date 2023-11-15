@@ -14,18 +14,18 @@
 	
 	<bean id="empbean" class="com.cg.Customer">
 		<property name="id"> <value>20</value></property>
-		<property name="name"><value>Alisa</value></property>
+		<property name="name"><value>Sai</value></property>
 		<property name="address" ref="add"></property>
 	</bean>
 	
 	<bean id="updateAdd" class="com.cg.Address">
-		<property name="city"> <value>Hyderabad</value></property>
-		<property name="state"><value>Telangana</value></property>
+		<property name="city"> <value>Vizag</value></property>
+		<property name="state"><value>AP</value></property>
 	</bean>
 	
 	<bean id="updateEmp" class="com.cg.Customer">
 		<property name="id"> <value>21</value></property>
-		<property name="name"><value>Aravind</value></property>
+		<property name="name"><value>Mani</value></property>
 		<property name="address" ref="updateAdd"></property>
 	</bean>
 	
